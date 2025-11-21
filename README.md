@@ -127,8 +127,13 @@ public class FlightsApplication {
 ```
 
 **Benefits of Using @Primary and @Qualifier**
-• Fine-Grained Control: Specify exactly which bean to inject when there are multiple candidates.
-• Maintainability: Easily swap implementations without changing the code that uses them.
-Further Advices
-Use @Primary sparingly to avoid confusion. Whenever possible, opt for @Qualifier to make
-dependencies explicit and understandable.
+
+• **Fine-Grained Control**: Specify exactly which bean to inject when there are multiple candidates.
+
+• **Maintainability**: Easily swap implementations without changing the code that uses them.
+
+**Further Advices**
+
+Use **@Primary** sparingly to avoid confusion.
+
+Whenever possible, opt for **@Qualifier** to make dependencies explicit and understandable.
