@@ -1,0 +1,39 @@
+What is the main purpose of Dependency Injection in Spring?
+a) To create new instances of classes automatically
+b) To allow external configuration of components
+c) To manage the lifecycle of components manually
+d) To facilitate direct instantiation of classes
+Answer: b) To allow external configuration of components
+Explanation: Dependency Injection in Spring allows components to be configured externally, promoting loose coupling and easier management of dependencies. The other options do not accurately reflect the core purpose of DI.
+
+Why is it important to use @Service and @Component annotations in Spring?
+a) They automatically log errors in the application
+b) They help define beans for automatic scanning and management
+c) They ensure all components are singletons by default
+d) They provide security features for components
+Answer: b) They help define beans for automatic scanning and management
+Explanation: The @Service and @Component annotations indicate to Spring that the class should be managed as a bean, allowing for automatic scanning and dependency injection. The other options are incorrect regarding their purpose.
+
+What is a significant benefit of using Dependency Injection in an application?
+a) It increases the size of the codebase
+b) It reduces the need for testing
+c) It enhances maintainability by decoupling components
+d) It requires fewer configuration files
+Answer: c) It enhances maintainability by decoupling components
+Explanation: Dependency Injection promotes loose coupling between components, making the application easier to maintain and test. The other options are misleading and do not represent the benefits of DI.
+
+What type of injection is recommended for mandatory dependencies in Spring?
+a) Field injection
+b) Setter injection
+c) Constructor injection
+d) Interface injection
+Answer: c) Constructor injection
+Explanation: Constructor injection is recommended for mandatory dependencies as it ensures that all required dependencies are provided at the time of instantiation, leading to better immutability and testability. The other options are either less preferred or not as effective for mandatory dependencies.
+
+In Spring, what does the @Autowired annotation do?
+a) It forces the creation of a singleton instance
+b) It automatically resolves and injects the required dependency
+c) It indicates a class should not be instantiated
+d) It creates a new instance of the bean every time it is needed
+Answer: b) It automatically resolves and injects the required dependency
+Explanation: The @Autowired annotation tells Spring to automatically resolve and inject the specified dependency into a bean. The other options do not accurately describe the function of @Autowired.

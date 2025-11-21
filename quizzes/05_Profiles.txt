@@ -1,0 +1,31 @@
+What is the main purpose of Spring Profiles?
+a) To create static configurations
+b) To enable conditional bean registration based on the active profile
+c) To eliminate the need for configuration files
+d) To enforce a single configuration for all environments
+Answer: b) To enable conditional bean registration based on the active profile
+Explanation: Spring Profiles allow for different configurations based on the active profile, facilitating dynamic behavior in the application. The other options do not accurately reflect the purpose of profiles.
+
+How can you activate a specific profile when running a Spring Boot application?
+a) By modifying the Java code directly
+b) By using command line arguments like --spring.profiles.active=prod
+c) By creating a new application.properties file for each profile
+d) By setting the profile in the application’s main method
+Answer: b) By using command line arguments like --spring.profiles.active=prod
+Explanation: You can activate a specific profile using command line arguments, allowing for dynamic profile switching at runtime. The other options do not provide the correct method for activating profiles.
+
+How do you define beans that are activated under specific profiles?
+a) By using the @Component annotation
+b) By using the @Profile annotation on the bean definition
+c) By creating separate configuration classes for each profile
+d) By specifying the profile in the application.properties file
+Answer: b) By using the @Profile annotation on the bean definition
+Explanation: The @Profile annotation is used to specify which beans should be activated based on the currently active profile. The other options do not accurately represent how to define profile-specific beans.
+
+Which of the following is NOT a benefit of using Spring Profiles?
+a) Environment-Specific Configuration
+b) Improved Flexibility
+c) Decreased Complexity
+d) Enhanced Maintainability
+Answer: c) Decreased Complexity
+Explanation: Spring Profiles improve flexibility at the cost of increased complexity, as they introduce conditional configurations and behavior based on the active profile. The other options accurately describe the benefits of using profiles.

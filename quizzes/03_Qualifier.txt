@@ -1,0 +1,89 @@
+
+What happens if there are multiple beans of the same type without @Primary or @Qualifier?
+a) Spring will randomly select one to inject
+b) The application will throw an exception at runtime
+c) One of the beans will be automatically designated as primary
+d) All beans will be injected simultaneously
+Answer: b) The application will throw an exception at runtime
+Explanation: If there are multiple beans of the same type and no @Primary or @Qualifier is specified, Spring will throw a NoSuchBeanDefinitionException at runtime because it cannot determine which bean to inject. The other options incorrectly describe Spring’s behavior in this scenario.
+
+What is the purpose of the @Primary annotation in Spring?
+a) To indicate that a bean should be destroyed
+b) To specify that a bean is a singleton
+c) To give preference to a particular bean when multiple candidates exist
+d) To prevent a bean from being autowired
+Answer: c) To give preference to a particular bean when multiple candidates exist
+Explanation: The @Primary annotation indicates that this bean should be used by default when multiple candidates qualify for autowiring. The other options do not accurately describe the purpose of @Primary.
+
+When would you use the @Qualifier annotation?
+a) When a bean needs to be registered
+b) When multiple beans of the same type exist and you want to specify which one to inject
+c) When you want to create a prototype bean
+d) When configuring external properties
+Answer: b) When multiple beans of the same type exist and you want to specify which one to inject
+Explanation: The @Qualifier annotation is used to resolve ambiguity when multiple beans of the same type are available, allowing you to specify exactly which one to inject. The other options do not pertain to its purpose.
+
+Why is it important to have a DataLoader interface?
+a) To increase code duplication
+b) To standardize behavior across different implementations of data loaders
+c) To avoid using Spring annotations
+d) To simplify the testing process
+Answer: b) To standardize behavior across different implementations of data loaders
+Explanation: Defining a common interface like DataLoader ensures that all data loaders follow the same structure and behavior, making the application more modular. The other options do not reflect the benefits of using an interface.
+
+What happens if you have multiple implementations of a service and do not use @Primary or @Qualifier?
+a) Spring will randomly choose one implementation
+b) The application will throw an exception due to ambiguity
+c) Only the first implementation will be used
+d) All implementations will be injected
+Answer: b) The application will throw an exception due to ambiguity
+Explanation: Without @Primary or @Qualifier, Spring cannot determine which implementation to inject and will throw a NoSuchBeanDefinitionException or a similar error at runtime. The other options inaccurately describe Spring’s behavior in this case.
+
+How do you set a default implementation using @Primary?
+a) Annotate the class with @Qualifier
+b) Annotate the class with @Primary
+c) Register the bean in XML configuration
+d) Use the @Component annotation without any other annotations
+Answer: b) Annotate the class with @Primary
+Explanation: To set a default implementation that will be injected when no other qualifier is specified, you should annotate the class with @Primary. The other options do not achieve this result.
+
+What is the primary benefit of using both @Primary and @Qualifier annotations together?
+a) They eliminate the need for any annotations
+b) They allow for dynamic runtime changes of beans
+c) They provide flexibility and control over bean selection
+d) They automatically configure all components
+Answer: c) They provide flexibility and control over bean selection
+Explanation: Using @Primary and @Qualifier together gives developers fine-grained control over which beans are injected, making it easier to manage dependencies effectively. The other options do not correctly describe the benefit.
+
+When is it appropriate to use @Primary?
+a) When there is only one implementation available
+b) When you want to make a bean mandatory
+c) When you have multiple candidates and want to designate a preferred one
+d) When the bean should not be injected
+Answer: c) When you have multiple candidates and want to designate a preferred one
+Explanation: @Primary is appropriate to use when there are multiple implementations of a bean and you want to specify one as the default for injection. The other options do not accurately reflect its use.
+
+What is the main advantage of using @Qualifier over @Primary?
+a) It simplifies the configuration process
+b) It eliminates the need for annotations altogether
+c) It makes the choice of bean explicit and understandable
+d) It increases performance
+Answer: c) It makes the choice of bean explicit and understandable
+Explanation: @Qualifier allows developers to specify exactly which bean to inject, providing clarity in situations where multiple beans of the same type exist. The other options do not accurately reflect the advantage.
+
+In which scenario would you typically opt for @Qualifier?
+a) When only one implementation exists
+b) When you want to change the default implementation
+c) When you have multiple beans of the same type and want to select one explicitly
+d) When configuring global settings
+Answer: c) When you have multiple beans of the same type and want to select one explicitly
+Explanation: @Qualifier is specifically used to resolve ambiguity by allowing the developer to specify which bean should be injected in cases where multiple beans of the same type exist. The other options do not accurately represent its purpose.
+
+What should you do to avoid confusion when using @Primary?
+a) Use it for every bean to ensure consistency
+b) Limit its usage and prefer @Qualifier for clarity
+c) Always use it with @Component
+d) Make every bean a singleton
+Answer: b) Limit its usage and prefer @Qualifier for clarity
+Explanation: It’s best practice to use @Primary sparingly to avoid confusion about which beans will be injected. Opting for @Qualifier when appropriate makes dependencies explicit and easier to understand. The other options do not promote best practices.
+

@@ -1,0 +1,48 @@
+What is the main purpose of the @Value annotation in Spring?
+a) To create new instances of beans
+b) To inject property values from configuration files into beans
+c) To specify the bean scope
+d) To define the structure of a properties file
+Answer: b) To inject property values from configuration files into beans
+Explanation: The @Value annotation is used to inject property values from external configuration files into Spring beans, facilitating dynamic configuration. The other options do not accurately describe its purpose.
+
+Why is externalizing configuration beneficial for the Flight Application?
+a) It increases the complexity of the codebase
+b) It makes it harder to modify application behavior
+c) It allows for easier changes to the file path without modifying code
+d) It eliminates the need for configuration files altogether
+Answer: c) It allows for easier changes to the file path without modifying code
+Explanation: By externalizing configuration, the application can change the file path easily without needing to modify the source code, enhancing flexibility and maintainability. The other options do not represent the benefits accurately.
+
+What should you create to hold externalized configurations in a Spring application?
+a) A settings.xml file
+b) A config.json file
+c) An application.properties file
+d) A data.yaml file
+Answer: c) An application.properties file
+Explanation: The application.properties file is the standard file used in Spring applications to hold externalized configuration settings. The other file formats are not typically used for this purpose in Spring.
+
+How do you retrieve a property value using the @Value annotation?
+a) By specifying the property name directly in the code
+b) By using the syntax ${property.name}
+c) By creating a getter method for each property
+d) By declaring the property in an XML file
+Answer: b) By using the syntax ${property.name}
+Explanation: To retrieve property values using @Value, you use the syntax ${property.name} where property.name corresponds to the key in the application.properties file. The other options do not reflect the correct method.
+
+What is one of the primary benefits of using externalized configuration?
+a) It complicates the deployment process
+b) It allows for the use of multiple configuration files for different environments
+c) It requires more lines of code for configuration
+d) It eliminates the need for any configuration at all
+Answer: b) It allows for the use of multiple configuration files for different environments
+Explanation: Externalized configuration supports different properties files for different environments, enhancing flexibility in managing configurations. The other options misrepresent the benefits.
+
+What should you do to inject a property using the @Value annotation in CSVDataLoader?
+a) Modify the constructor to accept the property as a parameter
+b) Use @Autowired with a default value
+c) Annotate the field with @Value("${property.name}")
+d) Use a static method to access the property
+Answer: c) Annotate the field with @Value("${property.name}")
+Explanation: To inject a property, you should annotate the field in the CSVDataLoader class with @Value, specifying the property key within the ${} syntax. The other options do not correctly describe how to inject properties.
+

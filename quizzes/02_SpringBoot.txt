@@ -1,0 +1,56 @@
+What does the @SpringBootApplication annotation combine?
+a) @Configuration, @EnableAutoConfiguration, @ComponentScan
+b) @Controller, @Service, @Repository
+c) @Component, @RestController, @Service
+d) @Configuration, @Service, @Autowired
+Answer: a) @Configuration, @EnableAutoConfiguration, @ComponentScan
+Explanation: The @SpringBootApplication annotation combines these three annotations, streamlining the configuration process in a Spring Boot application. The other options list annotations that are not combined in @SpringBootApplication.
+
+How does Spring Boot simplify the setup of Spring applications?
+a) By requiring more manual configurations
+b) By using a monolithic architecture
+c) By providing auto-configuration and an embedded server
+d) By eliminating the need for components
+Answer: c) By providing auto-configuration and an embedded server
+Explanation: Spring Boot simplifies setup by offering auto-configuration features and allowing the application to run on an embedded server, reducing the need for external server setup. The other options do not accurately describe Spring Boot’s purpose.
+
+Why is converting to a Spring Boot application beneficial for the Flight Application?
+a) It complicates dependency management
+b) It prepares the application for future enhancements
+c) It requires more manual coding
+d) It eliminates the need for configurations
+Answer: b) It prepares the application for future enhancements
+Explanation: Converting to Spring Boot streamlines configuration and simplifies dependency management, making it easier to add features like RESTful APIs. The other options are incorrect as they misrepresent the benefits.
+
+What is the purpose of the CommandLineRunner bean in a Spring Boot application?
+a) To run background tasks indefinitely
+b) To execute code after the Spring context is initialized
+c) To manage the application’s security settings
+d) To set up the database connection
+Answer: b) To execute code after the Spring context is initialized
+Explanation: The CommandLineRunner interface allows you to run specific code after the Spring context is fully initialized, useful for initialization tasks. The other options do not correctly describe its function.
+
+What should you do to convert an existing application to a Spring Boot application?
+a) Remove all existing configurations
+b) Annotate the main application class with @SpringBootApplication
+c) Create new classes for all existing components
+d) Change the entire application architecture
+Answer: b) Annotate the main application class with @SpringBootApplication
+Explanation: To convert to Spring Boot, you should annotate the main application class with @SpringBootApplication, which integrates various features. The other options are unnecessary steps.
+
+How does Spring Boot’s auto-configuration feature work?
+a) It requires manual setup for each component
+b) It automatically configures beans based on the libraries present on the classpath
+c) It removes the need for any configuration
+d) It only works with XML configuration
+Answer: b) It automatically configures beans based on the libraries present on the classpath
+Explanation: Spring Boot’s auto-configuration analyzes the classpath and automatically configures beans and settings based on what it finds. The other options are incorrect in describing how auto-configuration operates.
+
+What does Spring Boot recommend for managing dependencies?
+a) Manually adding each dependency to the classpath
+b) Using starters for dependency management
+c) Hardcoding dependencies in the application code
+d) Avoiding dependency management altogether
+Answer: b)
+Explanation: Spring Boot encourages the use of build tools like Maven or Gradle along with starters to simplify dependency management and configuration. The other options do not reflect recommended practices in Spring Boot.
+
