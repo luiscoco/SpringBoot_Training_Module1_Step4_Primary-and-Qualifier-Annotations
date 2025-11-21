@@ -137,3 +137,13 @@ public class FlightsApplication {
 Use **@Primary** sparingly to avoid confusion.
 
 Whenever possible, opt for **@Qualifier** to make dependencies explicit and understandable.
+
+### Summary
+
+Implemented **DataLoader** abstraction with multiple loaders and wired **@Primary/@Qualifier**:
+
+Added services/DataLoader interface and new services/DatabaseLoader (@Qualifier("dbDataLoader")) with a placeholder load implementation.
+
+Updated services/CSVDataLoader to implement DataLoader, marked it @Primary and @Qualifier("csvDataLoader") while keeping CSV parsing logic.
+
+Adjusted FlightsApplication: now injects DataLoader via @Qualifier("dbDataLoader") in CommandLineRunner, keeping the menu loop unchanged.
