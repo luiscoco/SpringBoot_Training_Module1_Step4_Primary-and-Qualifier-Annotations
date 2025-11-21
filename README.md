@@ -12,7 +12,7 @@ The **@Qualifier** annotation allows you to specify which bean to inject when th
 
 In our application, we may have multiple implementations of a service or component (e.g., different  data  loaders  for  various  formats).  
 
-By  using  @Primary  and  @Qualifier, we  can  control which bean gets injected without altering our application logic.
+By  using  **@Primary**  and  **@Qualifier**, we  can  control which bean gets injected without altering our application logic.
 
 ### Refactoring Application
 
